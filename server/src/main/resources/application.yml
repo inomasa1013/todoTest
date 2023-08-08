@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    properties:
+      hibernate:
+        hbm2dll:
+          create_namespaces: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo
+    username: user
+    password: im.12612678
+    driver-class-name: org.postgresql.Driver
