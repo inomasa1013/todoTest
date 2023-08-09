@@ -3,7 +3,7 @@ import "./list.scss"
 
 function List(): any {
 
-    const [listArray, setListArray] = useState<string[]>(["masa", "masamasa", "masasan"])
+    const [listArray, setListArray] = useState<string[]>([])
     const [inputValue, setInputValue] = useState<string>("")
 
     useEffect(() => {
@@ -16,12 +16,11 @@ function List(): any {
         })
 
     }, [])
-
-
     function deleteElement(index: number) {
         const dummyListArray = [...listArray]
         dummyListArray.splice(index, 1)
         setListArray(dummyListArray)
+        console.log(listArray)
     }
 
     function addElement(element: string) {
